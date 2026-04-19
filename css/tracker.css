@@ -1,0 +1,25 @@
+/* ════════════════════════════════════════════
+   tracker.css — Tracker Page Styles
+   GeoTrack v2.0
+════════════════════════════════════════════ */
+
+.tracker-wrap {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* 2-col coord boxes */
+.c2g { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin: .7rem 0; }
+.cbox { background: var(--bg2); border: 1px solid var(--border); padding: .6rem; text-align: center; border-radius: 3px; }
+.cbox .cl { font-family: 'Share Tech Mono', monospace; font-size: .56rem; color: var(--dim); display: block; margin-bottom: .18rem; }
+.cbox .cv { font-family: 'Orbitron', monospace; font-size: .78rem; color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tracker-wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .map-main { height: 280px; }
+}

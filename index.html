@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoTrack — Location Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">GEO<span>TRACK</span></a>
+  <ul class="nav-links">
+    <li><a id="nav-home"     href="index.html">HOME</a></li>
+    <li><a id="nav-about"    href="about.html">ABOUT</a></li>
+    <li><a id="nav-tracker"  href="tracker.html">TRACKER</a></li>
+    <li><a id="nav-fakelink" href="fakelink.html">FAKE LINK</a></li>
+    <li><a id="nav-ip"       href="ip.html">IP LOOKUP</a></li>
+    <li><a id="nav-contact"  href="contact.html">CONTACT</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger">☰</button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a id="mnav-home"     href="index.html">🏠 HOME</a>
+  <a id="mnav-about"    href="about.html">ℹ️ ABOUT</a>
+  <a id="mnav-tracker"  href="tracker.html">🗺️ TRACKER</a>
+  <a id="mnav-fakelink" href="fakelink.html">🔗 FAKE LINK</a>
+  <a id="mnav-ip"       href="ip.html">🌐 IP LOOKUP</a>
+  <a id="mnav-contact"  href="contact.html">✉️ CONTACT</a>
+</div>
+
+<!-- HOME CONTENT -->
+<div class="home-wrap">
+  <!-- Background fx -->
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0">
+    <div class="scan-line"></div>
+    <div class="hero-bg-glow"></div>
+  </div>
+
+  <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;max-width:1000px;margin:0 auto">
+
+    <div class="h-badge-row">
+      <div class="h-pill">⬡ GEOLOCATION INTELLIGENCE</div>
+      <div class="h-pill h-pill-red">⚠ ETHICAL RESEARCH ONLY</div>
+    </div>
+
+    <div class="h-eyebrow">// GeoTrack Intelligence Platform v2.0</div>
+    <h1 class="hero">
+      <span class="l1">TRACK. TRACE.</span>
+      <span class="l2">LOCATE.</span>
+    </h1>
+    <p class="hero-sub">Real-time GPS precision, IP intelligence, and ngrok-powered social engineering links — all in one cyberpunk-style dashboard.</p>
+
+    <div class="cta-row">
+      <a href="tracker.html" class="btn-p" style="text-decoration:none;display:inline-block">⬡ OPEN TRACKER</a>
+      <a href="fakelink.html" class="btn-s" style="text-decoration:none;display:inline-block">🔗 GENERATE LINK</a>
+    </div>
+
+    <div class="h-stats">
+      <div class="h-stat">
+        <div class="h-stat-dot" style="background:var(--green)"></div>
+        <div><div class="h-stat-num" id="c1">—</div><div class="h-stat-lbl">GPS ACCURACY</div></div>
+      </div>
+      <div class="h-stat-div"></div>
+      <div class="h-stat">
+        <div class="h-stat-dot" style="background:var(--accent)"></div>
+        <div><div class="h-stat-num">3</div><div class="h-stat-lbl">TRACK METHODS</div></div>
+      </div>
+      <div class="h-stat-div"></div>
+      <div class="h-stat">
+        <div class="h-stat-dot" style="background:var(--a2)"></div>
+        <div><div class="h-stat-num">0</div><div class="h-stat-lbl">CAPTURED</div></div>
+      </div>
+    </div>
+
+    <div class="feat-grid">
+      <a href="tracker.html" class="fcard" style="text-decoration:none">
+        <div class="fcard-num">01</div>
+        <span class="fi">🗺️</span>
+        <div class="ftt">MAP TRACKING</div>
+        <div class="fdd">GPS + coordinate search with reverse geocoding via OpenStreetMap Nominatim.</div>
+        <div class="fcard-arrow">→ TRACKER</div>
+      </a>
+      <a href="fakelink.html" class="fcard" style="text-decoration:none">
+        <div class="fcard-num">02</div>
+        <span class="fi">🔗</span>
+        <div class="ftt">FAKE LINK</div>
+        <div class="fdd">Ngrok URL → WeatherNow decoy → silent GPS/IP capture with session tokens.</div>
+        <div class="fcard-arrow">→ FAKE LINK</div>
+      </a>
+      <a href="ip.html" class="fcard" style="text-decoration:none">
+        <div class="fcard-num">03</div>
+        <span class="fi">🌐</span>
+        <div class="ftt">IP INTEL</div>
+        <div class="fdd">Any IP → city, ISP, timezone, org, coordinates on live OSM map.</div>
+        <div class="fcard-arrow">→ IP LOOKUP</div>
+      </a>
+      <a href="fakelink.html" class="fcard" style="text-decoration:none">
+        <div class="fcard-num">04</div>
+        <span class="fi">📡</span>
+        <div class="ftt">CAPTURE LOG</div>
+        <div class="fdd">Live GPS + IP captures plotted on map, auto-refresh every 5 seconds.</div>
+        <div class="fcard-arrow">→ FAKE LINK</div>
+      </a>
+    </div>
+
+  </div>
+</div><!-- end home-wrap -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="flogo">GEO<span>TRACK</span></div>
+      <p>Real-time location intelligence for ethical cybersecurity research, OSINT training, and digital forensics education.</p>
+      <div class="f-socials">
+        <a href="https://github.com/harsh160311/Geo-Track" target="_blank" rel="noopener" class="f-soc-btn">💻 GitHub</a>
+        <a href="https://ge0track.netlify.app" target="_blank" rel="noopener" class="f-soc-btn">🌐 Live Demo</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>NAVIGATION</h5>
+      <ul>
+        <li><a class="flink" href="index.html">Home</a></li>
+        <li><a class="flink" href="about.html">About</a></li>
+        <li><a class="flink" href="tracker.html">Tracker</a></li>
+        <li><a class="flink" href="fakelink.html">Fake Link</a></li>
+        <li><a class="flink" href="ip.html">IP Lookup</a></li>
+        <li><a class="flink" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>TECH STACK</h5>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--accent)"></div><span class="fstat-label">Leaflet.js</span><span class="fstat-val">1.9.4</span></div>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--green)"></div><span class="fstat-label">OpenStreetMap</span><span class="fstat-val">OSM</span></div>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--a2)"></div><span class="fstat-label">Flask</span><span class="fstat-val">Python</span></div>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--gold)"></div><span class="fstat-label">ip-api.com</span><span class="fstat-val">OSINT</span></div>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--a3)"></div><span class="fstat-label">Nominatim</span><span class="fstat-val">OSM</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="fcopy">GeoTrack © 2026 — <b>Educational Use Only</b> | Harsh, Sirsa, Haryana, India</div>
+    <div class="footer-badges">
+      <span class="fbadge">AGPL-3.0</span>
+      <span class="fbadge">OSM TILES</span>
+      <span class="fbadge">ETHICAL ONLY</span>
+    </div>
+  </div>
+</footer>
+
+<div class="statusbar">
+  <span><span class="dot c"></span>GEOTRACK v2.0</span>
+  <span>MAP: OpenStreetMap (OSM)</span>
+  <span id="sb-time">00:00:00</span>
+  <span style="margin-left:auto;color:var(--a2)">ETHICAL USE ONLY</span>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="js/config.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

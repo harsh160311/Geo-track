@@ -1,0 +1,19 @@
+/* ════════════════════════════════════════════
+   ip.css — IP Lookup Page Styles
+   GeoTrack v2.0
+════════════════════════════════════════════ */
+
+.ip-wrap {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ip-wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .map-ip { height: 280px; }
+}

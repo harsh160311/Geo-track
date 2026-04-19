@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Lookup — GeoTrack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/ip.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">GEO<span>TRACK</span></a>
+  <ul class="nav-links">
+    <li><a id="nav-home"     href="index.html">HOME</a></li>
+    <li><a id="nav-about"    href="about.html">ABOUT</a></li>
+    <li><a id="nav-tracker"  href="tracker.html">TRACKER</a></li>
+    <li><a id="nav-fakelink" href="fakelink.html">FAKE LINK</a></li>
+    <li><a id="nav-ip"       href="ip.html">IP LOOKUP</a></li>
+    <li><a id="nav-contact"  href="contact.html">CONTACT</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger">☰</button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a id="mnav-home"     href="index.html">🏠 HOME</a>
+  <a id="mnav-about"    href="about.html">ℹ️ ABOUT</a>
+  <a id="mnav-tracker"  href="tracker.html">🗺️ TRACKER</a>
+  <a id="mnav-fakelink" href="fakelink.html">🔗 FAKE LINK</a>
+  <a id="mnav-ip"       href="ip.html">🌐 IP LOOKUP</a>
+  <a id="mnav-contact"  href="contact.html">✉️ CONTACT</a>
+</div>
+
+<!-- IP LOOKUP CONTENT -->
+<div class="page-wrap">
+  <div class="pgtag">// IP INTELLIGENCE</div>
+  <div class="pgtitle">IP ADDRESS <span>LOOKUP</span></div>
+  <div class="divider"></div>
+
+  <div class="ip-wrap">
+
+    <!-- Left Panel -->
+    <div>
+      <div class="panel">
+        <div class="slbl">▸ QUERY</div>
+        <label>IP ADDRESS</label>
+        <input type="text" id="ip-in" placeholder="e.g. 8.8.8.8 (blank = your IP)">
+        <button class="btn bcyan" id="ip-btn">⬡ LOOKUP IP</button>
+        <button class="btn boutline" id="myip-btn" style="margin-top:.5rem">📡 MY IP INFO</button>
+      </div>
+
+      <div id="ip-res" class="rp" style="display:none;margin-top:1rem">
+        <div class="rr"><span class="rk">IP</span><span class="rv" id="ir-ip">—</span></div>
+        <div class="rr"><span class="rk">CITY</span><span class="rv" id="ir-city">—</span></div>
+        <div class="rr"><span class="rk">REGION</span><span class="rv" id="ir-region">—</span></div>
+        <div class="rr"><span class="rk">COUNTRY</span><span class="rv" id="ir-cntry">—</span></div>
+        <div class="rr"><span class="rk">LATITUDE</span><span class="rv" id="ir-lat">—</span></div>
+        <div class="rr"><span class="rk">LONGITUDE</span><span class="rv" id="ir-lng">—</span></div>
+        <div class="rr"><span class="rk">ISP</span><span class="rv" id="ir-isp">—</span></div>
+        <div class="rr"><span class="rk">ORG</span><span class="rv" id="ir-org">—</span></div>
+        <div class="rr"><span class="rk">TIMEZONE</span><span class="rv" id="ir-tz">—</span></div>
+        <div class="rr"><span class="rk">ZIP</span><span class="rv" id="ir-zip">—</span></div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="mapbox">
+      <div id="ip-map" class="lmap map-ip"></div>
+      <div class="mbadge"><span class="dot c"></span>OSM IP MAP</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="flogo">GEO<span>TRACK</span></div>
+      <p>Real-time location intelligence for ethical cybersecurity research, OSINT training, and digital forensics education.</p>
+      <div class="f-socials">
+        <a href="https://github.com/harsh160311/Geo-Track" target="_blank" rel="noopener" class="f-soc-btn">💻 GitHub</a>
+        <a href="https://ge0track.netlify.app" target="_blank" rel="noopener" class="f-soc-btn">🌐 Live Demo</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>NAVIGATION</h5>
+      <ul>
+        <li><a class="flink" href="index.html">Home</a></li>
+        <li><a class="flink" href="about.html">About</a></li>
+        <li><a class="flink" href="tracker.html">Tracker</a></li>
+        <li><a class="flink" href="fakelink.html">Fake Link</a></li>
+        <li><a class="flink" href="ip.html">IP Lookup</a></li>
+        <li><a class="flink" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>TECH STACK</h5>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--accent)"></div><span class="fstat-label">Leaflet.js</span><span class="fstat-val">1.9.4</span></div>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--green)"></div><span class="fstat-label">OpenStreetMap</span><span class="fstat-val">OSM</span></div>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--a2)"></div><span class="fstat-label">Flask</span><span class="fstat-val">Python</span></div>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--gold)"></div><span class="fstat-label">ip-api.com</span><span class="fstat-val">OSINT</span></div>
+      <div class="fstat-row"><div class="fstat-dot" style="background:var(--a3)"></div><span class="fstat-label">Nominatim</span><span class="fstat-val">OSM</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="fcopy">GeoTrack © 2026 — <b>Educational Use Only</b> | Harsh, Sirsa, Haryana, India</div>
+    <div class="footer-badges"><span class="fbadge">AGPL-3.0</span><span class="fbadge">OSM TILES</span><span class="fbadge">ETHICAL ONLY</span></div>
+  </div>
+</footer>
+
+<div class="statusbar">
+  <span><span class="dot c"></span>GEOTRACK v2.0</span>
+  <span>MAP: OpenStreetMap (OSM)</span>
+  <span id="sb-time">00:00:00</span>
+  <span style="margin-left:auto;color:var(--a2)">ETHICAL USE ONLY</span>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/config.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/ip.js"></script>
+<script src="js/nav.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    initMap('ip-map', 20.5937, 78.9629, 3);
+  });
+</script>
+</body>
+</html>

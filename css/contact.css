@@ -1,0 +1,79 @@
+/* ════════════════════════════════════════════
+   contact.css — Contact Page Styles
+   GeoTrack v2.0
+════════════════════════════════════════════ */
+
+.contact-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 1.8rem; align-items: start; }
+
+/* Info cards */
+.cinfo-stack { display: flex; flex-direction: column; gap: .9rem; }
+.cinfo-card {
+  background: var(--panel); border: 1px solid var(--border);
+  padding: 1.1rem 1.3rem; border-radius: 4px;
+  display: flex; align-items: flex-start; gap: .9rem; transition: border-color .3s;
+}
+.cinfo-card:hover { border-color: var(--accent); }
+.cinfo-icon {
+  width: 38px; height: 38px; flex-shrink: 0; border-radius: 7px;
+  background: rgba(0,245,255,.07); border: 1px solid rgba(0,245,255,.18);
+  display: flex; align-items: center; justify-content: center; font-size: 1rem;
+}
+.cinfo-lbl { font-family: 'Orbitron', monospace; font-size: .7rem; color: var(--accent); margin-bottom: .28rem; }
+.cinfo-val { font-family: 'Share Tech Mono', monospace; font-size: .74rem; color: var(--text); word-break: break-all; }
+.cinfo-sub { font-family: 'Share Tech Mono', monospace; font-size: .62rem; color: var(--dim); margin-top: .18rem; }
+
+/* Social grid */
+.social-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .6rem; margin-top: .8rem; }
+.scard {
+  background: var(--bg2); border: 1px solid var(--border); padding: .85rem .6rem;
+  border-radius: 4px; text-align: center; cursor: pointer; transition: all .2s;
+  text-decoration: none; display: block;
+}
+.scard:hover { border-color: var(--accent); background: rgba(0,245,255,.04); transform: translateY(-2px); }
+.scard-icon   { font-size: 1.3rem; display: block; margin-bottom: .35rem; }
+.scard-name   { font-family: 'Share Tech Mono', monospace; font-size: .63rem; color: var(--accent); display: block; margin-bottom: .12rem; }
+.scard-handle { font-family: 'Share Tech Mono', monospace; font-size: .58rem; color: var(--dim); display: block; }
+
+/* Contact form */
+.cf-panel { background: var(--panel); border: 1px solid var(--border); padding: 1.8rem; border-radius: 4px; }
+.cf-head {
+  font-family: 'Orbitron', monospace; font-size: .82rem; color: var(--accent);
+  letter-spacing: 2px; margin-bottom: 1.4rem;
+  padding-bottom: .75rem; border-bottom: 1px solid var(--border);
+}
+.cf-2col { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.cf-btn {
+  width: 100%; background: var(--accent); color: var(--bg); border: none; padding: .82rem;
+  font-family: 'Orbitron', monospace; font-size: .7rem; font-weight: 700; letter-spacing: 2px;
+  cursor: pointer; border-radius: 2px; transition: all .25s; margin-top: .8rem;
+}
+.cf-btn:hover { background: #fff; box-shadow: var(--glow); }
+.cf-btn:disabled { opacity: .5; cursor: not-allowed; }
+.cf-ok {
+  display: none; background: rgba(0,255,136,.07); border: 1px solid rgba(0,255,136,.3);
+  padding: 1rem 1.2rem; border-radius: 3px; margin-top: 1rem;
+  font-family: 'Share Tech Mono', monospace; font-size: .74rem; color: var(--green); text-align: center;
+}
+.cf-err {
+  display: none; background: rgba(255,60,110,.07); border: 1px solid rgba(255,60,110,.3);
+  padding: .8rem 1.1rem; border-radius: 3px; margin-top: .8rem;
+  font-family: 'Share Tech Mono', monospace; font-size: .72rem; color: var(--a2);
+}
+
+/* Disclaimer */
+.cdisclaimer {
+  background: rgba(255,60,110,.06); border: 1px solid rgba(255,60,110,.3);
+  border-left: 4px solid var(--a2); padding: 1.4rem 1.3rem; border-radius: 4px;
+  display: flex; align-items: flex-start; gap: 1rem; margin-top: 1.2rem;
+}
+.cdisclaimer-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1; margin-top: .1rem; }
+.cdisclaimer-text { font-family: 'Share Tech Mono', monospace; font-size: .72rem; color: var(--dim); line-height: 1.9; }
+.cdisclaimer-text b { display: block; font-family: 'Orbitron', monospace; font-size: .74rem; color: var(--a2); letter-spacing: 1px; margin-bottom: .5rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .cf-2col { grid-template-columns: 1fr; }
+}

