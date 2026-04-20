@@ -28,7 +28,7 @@ It combines **frontend mapping visualization**, **backend API services**, and **
 
 | Module | URL |
 |--------|-----|
-| 🌐 Frontend Dashboard | https://ge0track.netlify.app |
+| 🌐 Frontend Dashboard | https://geotrackv1.netlify.app |
 | ⚙️ Backend API | https://weatherforecast-live.up.railway.app |
 
 ---
